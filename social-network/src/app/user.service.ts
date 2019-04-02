@@ -9,7 +9,7 @@ export class UserService {
    constructor(private http: HttpClient) {}
 
     private getUsers()  {
-        return this.http.get(`https://randomuser.me/api/?inc=gender,name,picture,location&results=1&nat=gb`)
+        return this.http.get(`https://randomuser.me/api/?inc=gender,name,picture,location&results=8&nat=gb`)
         .pipe(map(response => response.results ))
         .pipe(map(users => {
           return users.map(user => {
