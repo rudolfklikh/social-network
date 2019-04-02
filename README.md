@@ -1,2 +1,2 @@
 # social-network
-Social network written in English and Typescript
+Social network written in Angular and Typescript
