@@ -1,0 +1,16 @@
+  <div class="row" *ngFor='let u of users'>
+    <div class="col s12 m3">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ u.image }}">
+          <span class="card-title">{{ u.name }}</span>
+        </div>
+        <div class="card-content">
+          <p>{{ u.geo }}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
