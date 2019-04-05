@@ -15,7 +15,7 @@ export class UserService {
           return users.map(user => {
             return {
               name : `${user.name.first} ${user.name.last}`,
-              image: `${user.picture.medium}`,
+              image: `${user.picture.large}`,
               geo : `${user.location.city} ${user.location.state} ${user.location.street}`
             };
           })
