@@ -1,4 +1,17 @@
 .main-information__block-card {
     height: 460px;
     margin-top: 50px;
+    position: relative;
+}
+.hovered {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5 );
+    transition: 0.7s all;
+    z-index: 10;
+    cursor: pointer;
+}
+.links__block-card {
+    position: absolute;
+    bottom: 1rem;
+    left: 0.5rem;
 }
