@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HoverDirective } from './hover.directive';
+
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -12,6 +14,7 @@ import { UserComponent } from './user/user.component';
   declarations: [
     AppComponent,
     HomePageComponent,
+    HoverDirective,
     UserComponent
   ],
   imports: [
