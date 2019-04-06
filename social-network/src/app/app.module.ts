@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { HoverDirective } from './hover.directive';
 
@@ -10,7 +11,12 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { UserComponent } from './user/user.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { SetupComponent } from './setup/setup.component';
 
+const routes = [
+  {path: '', component: HomePageComponent},
+  {path: 'setup', component: SetupComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,12 +24,14 @@ import { FooterComponent } from './footer/footer.component';
     HoverDirective,
     UserComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    SetupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
