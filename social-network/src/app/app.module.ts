@@ -12,6 +12,7 @@ import { UserComponent } from './user/user.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SetupComponent } from './setup/setup.component';
+import { MainContentComponent } from './main-content/main-content.component';
 
 const routes = [
   {path: '', component: HomePageComponent},
@@ -25,7 +26,8 @@ const routes = [
     UserComponent,
     NavBarComponent,
     FooterComponent,
-    SetupComponent
+    SetupComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
