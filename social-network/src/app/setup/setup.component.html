@@ -1,4 +1,11 @@
 <div class="row">
-  HELOO
-  
-</div>
+  <div class="setup_block--flex">
+      <div class="input-field col s7 m7 l7">
+          <input id="last_name" type="number" class="validate" [(ngModel)]="size">
+          <label for="last_name">Number of users</label>
+      </div>
+      <div class="col s5 m5 l5 setup_button-block--align">
+          <a class="waves-effect waves-light btn" (click)="onChange()"><i class="material-icons left">cloud</i>Zmienić</a>
+      </div>
+  </div>
+</div>    
