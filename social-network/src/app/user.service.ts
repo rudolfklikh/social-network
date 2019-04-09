@@ -17,7 +17,9 @@ export class UserService {
             return {
               name : `${user.name.first} ${user.name.last}`,
               image: `${user.picture.large}`,
-              geo : `${user.location.city} ${user.location.state} ${user.location.street}`
+              street : `${user.location.street}`,
+              state : `${user.location.state}`,
+              city : `${user.location.city}`
             };
           })
        }))
