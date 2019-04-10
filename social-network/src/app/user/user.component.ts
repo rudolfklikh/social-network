@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { from } from 'rxjs';
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -7,7 +7,9 @@ import { from } from 'rxjs';
 })
 export class UserComponent implements OnInit {
   @Input() user;
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit() {
   }

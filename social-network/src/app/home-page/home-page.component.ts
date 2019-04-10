@@ -7,7 +7,7 @@ import { UserService } from '../user.service';
 })
 export class HomePageComponent implements OnInit {
   users = [];
-
+  searchStr = '';
   constructor(public userService : UserService) { }
 
   ngOnInit() {
