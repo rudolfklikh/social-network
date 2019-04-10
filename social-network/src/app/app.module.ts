@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 
 import { HoverDirective } from './hover.directive';
 
+import { SearchPipe } from './search.pipe';
+
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -28,7 +30,8 @@ const routes = [
     NavBarComponent,
     FooterComponent,
     SetupComponent,
-    MainContentComponent
+    MainContentComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
