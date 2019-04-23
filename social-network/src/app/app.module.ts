@@ -31,7 +31,7 @@ const routes = [
     FooterComponent,
     SetupComponent,
     MainContentComponent,
-    SearchPipe
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
