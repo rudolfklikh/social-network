@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Sidenav } from 'materialize-css';
+import { AuthorizationService } from '../services/authorization.service';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -7,7 +8,7 @@ import { Sidenav } from 'materialize-css';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() {
+  constructor(private auth: AuthorizationService) {
   }
 
   ngOnInit() {
@@ -26,4 +27,10 @@ export class NavBarComponent implements OnInit {
       });
     });
   };
+  public signOut() {
+    this.auth.signOut();
+  }
+  get user$() {
+    return this.auth.user$;
+  }
 };
