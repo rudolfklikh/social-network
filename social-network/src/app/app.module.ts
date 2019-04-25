@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { HoverDirective } from './hover.directive';
 
@@ -16,11 +18,17 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SetupComponent } from './setup/setup.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { LoginComponent } from './login/login.component';
 
-const routes = [
-  {path: '', component: HomePageComponent},
-  {path: 'setup', component: SetupComponent}
-];
+const config = {
+  apiKey: "AIzaSyDv9ZlzYDwL5dKoV3fF-2r9RQCzHX1zhMg",
+  authDomain: "angularpractice-7b693.firebaseapp.com",
+  databaseURL: "https://angularpractice-7b693.firebaseio.com",
+  projectId: "angularpractice-7b693",
+  storageBucket: "angularpractice-7b693.appspot.com",
+  messagingSenderId: "859016127883"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,13 +40,16 @@ const routes = [
     SetupComponent,
     MainContentComponent,
     SearchPipe,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes),
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

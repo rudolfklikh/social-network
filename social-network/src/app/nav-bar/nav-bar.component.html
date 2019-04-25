@@ -3,8 +3,12 @@
       <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="brand-logo">Logo</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a [routerLink]="['/setup']" routerLinkActive="router-link-active" >Setup</a></li>
-
+          <ng-template [ngIf]="user$ | async">
+              <li><a routerLink='/'><i class="material-icons left">laptop_mac</i>Search Page</a></li>
+              <li><a routerLink='/setup'><i class="material-icons left">developer_board</i>Setup</a></li>
+          </ng-template>
+          
+        <li *ngIf="user$ | async"><a (click)="signOut()"><i class="material-icons left">fingerprint</i>Sign Out</a></li>
       </ul>
     </div>
 </nav>
