@@ -2,13 +2,14 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators/';
 import { ArrayInterface as Arr } from './array-interface';
+import { Observable } from 'rxjs';
 @Injectable()
 export class UserService {
   private size = 8;
   constructor(private http: HttpClient) { }
 
-  private getUsers() {
-    return this.http.get(`https://randomuser.me/api/?inc=gender,name,picture,location&results=${this.size}&nat=gb`)
+  public getUsers()  {
+    return this.http.get(`https://randomuser.me/api/?seed=foobar/?inc=gender,name,picture,location&results=${this.size}&nat=gb`)
       .pipe(map((response: Arr) => response.results))
       .pipe(map(users => {
         return users.map(user => {
@@ -21,9 +22,6 @@ export class UserService {
           };
         })
       }))
-  }
-  public GetgetUsers() {
-    return this.getUsers();
   }
   public setSize(size) {
     this.size = size;

@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SetupComponent } from './setup/setup.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponentComponent } from './profile-component/profile-component.component';
 
 const config = {
   apiKey: "AIzaSyDv9ZlzYDwL5dKoV3fF-2r9RQCzHX1zhMg",
@@ -41,6 +42,7 @@ const config = {
     MainContentComponent,
     SearchPipe,
     LoginComponent,
+    ProfileComponentComponent,
   ],
   imports: [
     BrowserModule,
