@@ -8,11 +8,11 @@ import { UserService } from '../user.service';
 export class HomePageComponent implements OnInit {
   users = [];
   searchStr = '';
-  constructor(public userService : UserService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit() {
-    this.userService.GetgetUsers().subscribe(users => {
-        this.users = users;
-  }); 
+    this.userService.getUsers().subscribe(users => {
+      this.users = users;
+    });
   };
 };
