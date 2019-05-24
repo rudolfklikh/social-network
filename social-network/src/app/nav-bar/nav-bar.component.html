@@ -1,8 +1,8 @@
 <nav>
     <div class="nav-wrapper">
-      <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+      <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="brand-logo"><img class="logo" src="../../assets/logo.svg"></a>
+      <a *ngIf="user$ | async" href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down nav__links">
         
           <ng-template [ngIf]="user$ | async">
               <li><a routerLink='/'><i class="material-icons left">laptop_mac</i>Search Page</a></li>

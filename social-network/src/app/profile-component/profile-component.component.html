@@ -1,9 +1,41 @@
 <div *ngIf="user">
-    <div>
-        <img src="{{ user.image }}">
+    <div class="row ff">
+        <div>
+            <img src="{{ user.image }}" class="mm">
+        </div>
     </div>
-    <p>{{ user.name }}</p>
-    <p>City : {{ user.city  }}</p>
-    <p>State : {{ user.state}}</p>
-    <p>Street : {{ user.street }}</p>
+    <div class="row">
+        <div class="kk col l7 s12 m7 offset-l4 offset-m4">
+            <p>{{ user.name }}</p>
+            <p>City : {{ user.city  }}</p>
+            <p>State : {{ user.state}}</p>
+            <p>Street : {{ user.street }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            Hello, It’s nice to meet you. My name is {{ user.name }}. I am from {{ user.city  }}. I live in
+            {{ user.state}}
+            I’m interested in computer science, music, sport and fantasy literature. Computers first appered in my life
+            when I was seven. Then I had got my first computer. It was Commodore 64 and I remember myself thinking, that
+            it was the best thing in the world. I was playing it whenever I could. Then I had got my first PC. At first,
+            I was just playing computer games, but some time later, I noticed that I could do a lot more things with the
+            computer, for example programming. Now, I can already programue in Pascal, C++ and HTML. I have my own site
+            on the internet and I have done many programues. I hope that in the future I will get a job as a computer
+            scientist.
+        </p>
+    </div>
+    <div class="row">
+        Followers :
+        Likes :
+        Posts :
+    </div>
+    <div class="row ii">
+            <ul class="col l6 m6 s12">
+                    <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.linkedin.com/in/rudolf-klikh-09667516a/"><img src="../../assets/icons/linkedin.svg"></a></li>
+                    <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/rudolf.klikh.3"><img src="../../assets/icons/facebook.svg"></a></li>
+                    <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/rudolfklikh"><img src="../../assets/icons/github.svg"></a></li>
+                    <li><a class="grey-text text-lighten-3" target="_blank" href="https://twitter.com/GrafTolstoj"><img src="../../assets/icons/twitter.svg"></a></li>
+            </ul>
+    </div>
 </div>

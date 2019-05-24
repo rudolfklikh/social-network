@@ -1,0 +1,35 @@
+.ff {
+    width: 100%;
+    height: 200px;
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+}
+.kk {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.mm {
+    position: absolute;
+    top: 85px;
+    left: 35px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    height: 180px;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img {
+    height: 50px;
+}
+.ii {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4rem;
+}

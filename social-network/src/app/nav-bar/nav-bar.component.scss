@@ -1,0 +1,43 @@
+nav {
+    background-color: 	#B06ED4 !important;
+    min-height: 100px;
+}
+
+.nav__links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.logo {
+    height: 80px;
+    margin-top: 10px;
+    transition: 0.4s all;
+    padding-left: 15px;
+}
+.logo:hover {
+    height: 85px;
+
+}
+a {
+    font-size: 1.3rem !important;
+}
+.sidenav-trigger {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.sidenav-trigger i {
+    font-size: 3rem;
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 992px) { 
+    .sidenav-trigger {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

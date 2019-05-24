@@ -22,15 +22,16 @@ export class ProfileComponentComponent implements OnInit {
   }
 
   public getHero() {
-    const id = this.route.snapshot.paramMap.get('name');
-    
+    const name = this.route.snapshot.paramMap.get('name');
+    console.log(name);
     this.userService.getUsers().subscribe(users => {
       this.users = users;
 
       for (let i = 0; i < this.users.length; i++) {
 
-        if (this.users[i].name == id) {
+        if (this.users[i].name == name) {
           this.user = this.users[i];
+          break;
         }
       }
     })

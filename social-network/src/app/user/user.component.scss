@@ -1,7 +1,21 @@
 .main-information__block-card {
-    height: 460px;
     margin-top: 50px;
     position: relative;
+
+    &_exp {
+        font-size: 20px;
+        font-family: coursive;
+        color: #CD3FD2;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.images {
+    position: relative;
+    object-fit: cover;
 }
 .hovered {
     transform: scale(1.05);
@@ -14,4 +28,61 @@
     position: absolute;
     bottom: 1rem;
     left: 0.5rem;
+
+    &-btn {
+        border-radius: 10px !important;
+        background-color: #CD3FD2;
+    }
 }
+
+@media screen and (min-device-width: 0px) and (max-device-width: 600px) {
+    .main-information__block-card {
+        height: 720px;
+    }
+} 
+@media screen and (min-device-width: 320px) and (max-device-width: 380px) {
+    .main-information__block-card {
+        height: 520px;
+    }
+} 
+@media screen and (min-device-width: 381px) and (max-device-width: 420px) {
+    .main-information__block-card {
+        height: 570px;
+    }
+} 
+@media screen and (min-device-width: 421px) and (max-device-width: 500px) {
+    .main-information__block-card {
+        height: 630px;
+    }
+} 
+@media screen and (min-device-width: 601px) and (max-device-width: 802px) {
+    .main-information__block-card {
+        height: 530px;
+    }
+} 
+@media screen and (min-device-width: 803px) and (max-device-width: 900px) {
+    .main-information__block-card {
+        height: 570px;
+    }
+} 
+@media screen and (min-device-width: 901px) and (max-device-width: 992px) {
+    .main-information__block-card {
+        height: 620px;
+    }
+} 
+@media screen and (min-device-width: 993px) and (max-device-width: 1190px) {
+    .main-information__block-card {
+        height: 485px;
+    }
+    .main-information__block-card_exp {
+        font-size: 15px;
+    }
+}
+@media screen and (min-device-width: 1192px) and (max-device-width: 2000px) {
+    .main-information__block-card {
+        height: 500px;
+    }
+    .main-information__block-card_exp {
+        font-size: 18px;
+    }
+}  
