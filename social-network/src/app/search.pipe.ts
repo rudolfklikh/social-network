@@ -1,10 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+import { ArrayInterface } from './array-interface';
 @Pipe({
     name: 'search'
 })
 export class SearchPipe implements PipeTransform {
-    transform(users, value) {
+    transform(users : ArrayInterface, value : string) {
         value = value.toLowerCase();
 
         if (value === undefined) {

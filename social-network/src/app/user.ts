@@ -1,11 +1,4 @@
-import { filter } from 'rxjs/operators';
-
-export interface ArrayInterface {
-    results : Array<Obj>
-    filter
-}
-
-interface Obj {
+export interface User {
     name?: {
         first : string,
         last : string

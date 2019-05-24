@@ -5,5 +5,5 @@
     </div>
 </div>
 <div class="row">
-    <app-user *ngFor="let u of users | search:searchStr" [user]='u'></app-user>
+    <app-user *ngFor="let u of users | search:searchStr; trackBy:trackByUser"  [user]='u'></app-user>
 </div>

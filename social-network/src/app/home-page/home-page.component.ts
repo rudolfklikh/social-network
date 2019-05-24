@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { User } from '../user';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -7,7 +8,7 @@ import { UserService } from '../user.service';
 })
 export class HomePageComponent implements OnInit {
   users = [];
-  searchStr = '';
+  searchStr : string  = '';
   constructor(public userService: UserService) { }
 
   ngOnInit() {
@@ -15,4 +16,7 @@ export class HomePageComponent implements OnInit {
       this.users = users;
     });
   };
+  trackByUser(index : number, item : User) : {first : string, last : string} {
+    return item.name;
+  }
 };

@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { HoverDirective } from './hover.directive';
 
 import { SearchPipe } from './search.pipe';
+import { CapitalizePipe } from './capitalize.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +21,7 @@ import { SetupComponent } from './setup/setup.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponentComponent } from './profile-component/profile-component.component';
-import { CapitalizePipe } from './capitalize.pipe';
+
 
 const config = {
   apiKey: "AIzaSyDv9ZlzYDwL5dKoV3fF-2r9RQCzHX1zhMg",
