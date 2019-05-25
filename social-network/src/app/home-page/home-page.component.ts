@@ -12,7 +12,7 @@ export class HomePageComponent implements OnInit {
   constructor(public userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(users => {
+    this.userService.getUsers().subscribe(users => { 
       this.users = users;
     });
   };

@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class UserService {
   private size = 8;
+
+
   constructor(private http: HttpClient) { }
 
   public getUsers()  {
@@ -28,5 +30,25 @@ export class UserService {
   }
   public getSize() {
     return this.size;
+  }
+
+  public getUserByName(name : string) {
+
+    return this.http.get(`https://randomuser.me/api/?seed=foobar/?inc=gender,name,picture,location&results=${this.size}&nat=gb`)
+    .pipe(map((response: Arr) => response.results))
+    .pipe(map(users => {
+      let user =  users.find(user => {
+        console.log(user);
+        return `${user.name.first} ${user.name.last}` === name;
+      })
+      return {
+        name: `${user.name.first} ${user.name.last}`,
+        image: `${user.picture.large}`,
+        street: `${user.location.street}`,
+        state: `${user.location.state}`,
+        city: `${user.location.city}`
+      };
+    }))
+    
   }
 }
