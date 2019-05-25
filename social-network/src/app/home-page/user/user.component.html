@@ -1,18 +1,18 @@
 <div class="col s12 m6 l3 ">
     <div class="card main-information__block-card" appHover>
       <div class="card-image">
-        <img src="{{ user.image }}" class="images">
-        <span class="card-title">{{ user.name }}</span>
+        <img src="{{ _user.image }}" class="images">
+        <span class="card-title">{{ _user.name }}</span>
       </div>
       <div class="card-content  main-information__block-card_exp">
-        <p>City : {{ user.city | capitalize  }}</p>
-        <p>State : {{ user.state | capitalize }}</p>
-        <p>Street : {{ user.street | capitalize  }}</p>
+        <p>City : {{ _user.city | capitalize  }}</p>
+        <p>State : {{ _user.state | capitalize }}</p>
+        <p>Street : {{ _user.street | capitalize  }}</p>
       </div>
       <div class="card-action">
       </div>
       <div class="links__block-card">
-        <a class="waves-effect waves-light btn links__block-card-btn" routerLink="/account/{{user.name}}"><i class="material-icons right">account_circle</i>Profile</a>
+        <a class="waves-effect waves-light btn links__block-card-btn" routerLink="/account/{{_user.name}}"><i class="material-icons right">account_circle</i>Profile</a>
       </div>
     </div>
 </div>
