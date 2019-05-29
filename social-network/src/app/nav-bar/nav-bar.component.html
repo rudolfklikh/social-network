@@ -5,6 +5,7 @@
       <ul class="right hide-on-med-and-down nav__links">
         
           <ng-template [ngIf]="user$ | async">
+              <li><a routerLink='/user'><i class="small material-icons left">person</i>Account</a></li>
               <li><a routerLink='/'><i class="material-icons left">laptop_mac</i>Search Page</a></li>
               <li><a routerLink='/setup'><i class="material-icons left">developer_board</i>Setup</a></li>
           </ng-template>
@@ -16,6 +17,7 @@
   <ul class="sidenav" id="mobile-demo">
         
   <ng-template [ngIf]="user$ | async">
+      <li><a routerLink='/user'><i class="small material-icons left">person</i>Account</a></li>
       <li><a routerLink='/'><i class="material-icons left">laptop_mac</i>Search Page</a></li>
       <li><a routerLink='/setup'><i class="material-icons left">developer_board</i>Setup</a></li>
   </ng-template>

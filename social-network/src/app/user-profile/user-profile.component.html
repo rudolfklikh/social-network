@@ -1,0 +1,9 @@
+<div *ngIf="profile">
+  <div class="row">
+    <div class="col l12 m12 s12 work-profile__user">
+          <img src="{{ profile.photoURL }}" class="work-profile__user-img">
+          <p>{{ profile.displayName }}</p>
+          <p>{{ profile.email}} </p>
+    </div>
+  </div>
+</div>

@@ -21,6 +21,7 @@ import { SetupComponent } from './setup/setup.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponentComponent } from './profile-component/profile-component.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 const config = {
@@ -46,6 +47,7 @@ const config = {
     LoginComponent,
     ProfileComponentComponent,
     CapitalizePipe,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

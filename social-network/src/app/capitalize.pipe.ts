@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { element } from '@angular/core/src/render3';
 
 @Pipe({
   name: 'capitalize'
@@ -6,12 +7,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CapitalizePipe implements PipeTransform {
 
   transform(city: string, args?: any): string {
-
+    let newArr = [];
+    
     if (city === undefined) {
       return args;
     }
-
-    return `${city.charAt(0).toUpperCase()}${city.slice(1)}`;
+    let arrProperty = city.split(' ').forEach((element) => {
+      newArr.push(`${element.charAt(0).toUpperCase()}${element.slice(1)}`);
+    });
+     
+    return newArr.join(' ');
   }
 
 }

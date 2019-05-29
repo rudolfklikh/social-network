@@ -5,10 +5,11 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import {
   AngularFirestore,
-  AngularFirestoreDocument
+  AngularFirestoreDocument,
 } from '@angular/fire/firestore';
+import {   AngularFireDatabase } from '@angular/fire/database'
 import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { switchMap, first } from 'rxjs/operators';
 
 
 @Injectable({
@@ -57,4 +58,8 @@ export class AuthorizationService {
   public userf(user) {
     return this.updateUserData(user);
   };
+
+  public getUser() {
+    return this.afAuth.authState.pipe(first());
+  }
 }
