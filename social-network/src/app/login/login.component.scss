@@ -9,8 +9,12 @@ body {
 	font-size: 16px; font-family: 'Source Sans Pro', sans-serif; font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 }
+.wrapper {
+	display: flex;
+	justify-content: center;
+	padding-top: 3rem;
+}
 form {
-	position: absolute; top: 53%; left: 50%; transform: translate(-50%,-50%);
 	display: block; width: 100%; max-width: 400px; background-color: #FFF;
 	margin: 0; padding: 2.25em; box-sizing: border-box; border: solid 1px #DDD; border-radius: .5em;
 	font-family: 'Source Sans Pro', sans-serif;

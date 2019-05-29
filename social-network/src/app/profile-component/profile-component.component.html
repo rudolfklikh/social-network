@@ -1,19 +1,34 @@
 <div *ngIf="user">
-    <div class="row ff">
-        <div>
-            <img src="{{ user.image }}" class="mm">
+    <div class="row work-profile__user-background"
+        [ngStyle]="{'background': '#fff url(' + userStats.img + ') no-repeat 0 0', 'background-size': 'cover'}">
+        <div class="work-profile__stats-div">
+            <div class="row work-profile__stats-div-row">
+                <div class="col l8 offset-l4 s12 offset-m4 m8 work-profile__stats-div-row__info">
+                    <p class="paragraph_info">Followers <span class="span_info">{{ userStats.followers}} </span></p>
+                    <p class="paragraph_info">Following <span class="span_info">{{ userStats.following }}</span></p>
+                    <p class="paragraph_info">Photos <span class="span_info">{{ userStats.photos }}</span></p>
+                    <p class="paragraph_info">Likes <span class="span_info">{{ userStats.likes }}</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="work-profile__stats-div-row__img">
+            <img [src]="user.image">
         </div>
     </div>
     <div class="row">
-        <div class="kk col l7 s12 m7 offset-l4 offset-m4">
-            <p>{{ user.name }}</p>
-            <p>City : {{ user.city  }}</p>
-            <p>State : {{ user.state}}</p>
-            <p>Street : {{ user.street }}</p>
+        <div class="col l10  offset-l2 m11 offset-m1 s12 work-portfolio__follow-wrapper ">
+            <h1 class="work-profile__title-name">{{ user.name | capitalize }}</h1>
+            <div class="work-portfolio__follow__block-info">
+                <i class="small material-icons">person</i>
+                <p>{{ user.city | capitalize}},{{ user.state | capitalize}}, {{user.street | capitalize}}</p>
+            </div>
+            <div>
+                <button class="work-portfolio__follow_button" (click)="Follow()">{{charge}}</button>
+            </div>
         </div>
     </div>
     <div class="row">
-        <p>
+        <p class="work-portfolio__text-about">
             Hello, It’s nice to meet you. My name is {{ user.name }}. I am from {{ user.city  }}. I live in
             {{ user.state}}
             I’m interested in computer science, music, sport and fantasy literature. Computers first appered in my life
@@ -25,17 +40,9 @@
             scientist.
         </p>
     </div>
-    <div class="row">
-        Followers :
-        Likes :
-        Posts :
-    </div>
     <div class="row ii">
-            <ul class="col l6 m6 s12">
-                    <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.linkedin.com/in/rudolf-klikh-09667516a/"><img src="../../assets/icons/linkedin.svg"></a></li>
-                    <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/rudolf.klikh.3"><img src="../../assets/icons/facebook.svg"></a></li>
-                    <li><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/rudolfklikh"><img src="../../assets/icons/github.svg"></a></li>
-                    <li><a class="grey-text text-lighten-3" target="_blank" href="https://twitter.com/GrafTolstoj"><img src="../../assets/icons/twitter.svg"></a></li>
-            </ul>
+        <div class="col l6 m6 s12 f">
+            <img src="../../assets/signature.png">
+        </div>
     </div>
 </div>

@@ -1,0 +1,9 @@
+
+export const ProfileStats = [
+    { followers: Math.floor(Math.random() * (1400 - 50)) + 50, photos: Math.floor(Math.random() * (100 - 40)) + 40, following: Math.floor(Math.random() * (1400 - 50)) + 50, likes: Math.floor(Math.random() * (2300 - 10) + 10), img: '../../assets/randomBackGround/background.jpg' },
+    { followers: Math.floor(Math.random() * (1400 - 50)) + 50, photos: Math.floor(Math.random() * (100 - 40)) + 40, following: Math.floor(Math.random() * (1400 - 50)) + 50, likes: Math.floor(Math.random() * (2300 - 10) + 10), img: '../../assets/randomBackGround/background1.jpg' },
+    { followers: Math.floor(Math.random() * (1400 - 50)) + 50, photos: Math.floor(Math.random() * (100 - 40)) + 40, following: Math.floor(Math.random() * (1400 - 50)) + 50, likes: Math.floor(Math.random() * (2300 - 10) + 10), img: '../../assets/randomBackGround/background2.jpg' },
+    { followers: Math.floor(Math.random() * (1400 - 50)) + 50, photos: Math.floor(Math.random() * (100 - 40)) + 40, following: Math.floor(Math.random() * (1400 - 50)) + 50, likes: Math.floor(Math.random() * (2300 - 10) + 10), img: '../../assets/randomBackGround/background3.jpg' },
+    { followers: Math.floor(Math.random() * (1400 - 50)) + 50, photos: Math.floor(Math.random() * (100 - 40)) + 40, following: Math.floor(Math.random() * (1400 - 50)) + 50, likes: Math.floor(Math.random() * (2300 - 10) + 10), img: '../../assets/randomBackGround/background4.jpg' },
+    { followers: Math.floor(Math.random() * (1400 - 50)) + 50, photos: Math.floor(Math.random() * (100 - 40)) + 40, following: Math.floor(Math.random() * (1400 - 50)) + 50, likes: Math.floor(Math.random() * (2300 - 10) + 10), img: '../../assets/randomBackGround/background5.jpg' },
+];

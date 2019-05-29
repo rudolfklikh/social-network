@@ -38,7 +38,6 @@ export class UserService {
     .pipe(map((response: Arr) => response.results))
     .pipe(map(users => {
       let user =  users.find(user => {
-        console.log(user);
         return `${user.name.first} ${user.name.last}` === name;
       })
       return {
