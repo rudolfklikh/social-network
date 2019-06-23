@@ -26,7 +26,6 @@ export class ProfileComponentComponent implements OnInit {
   ngOnInit() {
     this.getUserProfile();
     this.getProfileStats();
-    this.getUser();
   }
 
   public getUserProfile() {
