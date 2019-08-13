@@ -15,7 +15,6 @@ export class CapitalizePipe implements PipeTransform {
     let arrProperty = city.split(' ').forEach((element) => {
       newArr.push(`${element.charAt(0).toUpperCase()}${element.slice(1)}`);
     });
-     
     return newArr.join(' ');
   }
 
