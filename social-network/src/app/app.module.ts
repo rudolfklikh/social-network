@@ -8,8 +8,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './common-components/nav-bar/nav-bar.component';
-import { FooterComponent } from './common-components/footer/footer.component';
+import { NavBarComponent } from './shared-module/common-components/nav-bar/nav-bar.component';
+import { FooterComponent } from './shared-module/common-components/footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { LoginComponent } from './login/login.component';
 
