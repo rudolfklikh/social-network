@@ -17,10 +17,10 @@
     </div>
     <div class="row">
         <div class="col l10  offset-l2 m11 offset-m1 s12 work-portfolio__follow-wrapper ">
-            <h1 class="work-profile__title-name">{{ user.name  }}</h1>
+            <h1 class="work-profile__title-name">{{ user.name | capitalize }}</h1>
             <div class="work-portfolio__follow__block-info">
                 <i class="small material-icons">person</i>
-                <p>{{ user.city }},{{ user.state }}, {{user.street }}</p>
+                <p>{{ user.city | capitalize }},{{ user.state | capitalize }}, {{user.street | capitalize }}</p>
             </div>
             <div>
                 <button class="work-portfolio__follow_button" (click)="Follow()">{{charge}}</button>
@@ -29,8 +29,8 @@
     </div>
     <div class="row">
         <p class="work-portfolio__text-about">
-            Hello, It’s nice to meet you. My name is {{ user.name  }}. I am from {{ user.city   }}. I live in
-            {{ user.state }}
+            Hello, It’s nice to meet you. My name is {{ user.name | capitalize }}. I am from {{ user.city | capitalize  }}. I live in
+            {{ user.state  | capitalize }}
             I’m interested in computer science, music, sport and fantasy literature. Computers first appered in my life
             when I was seven. Then I had got my first computer. It was Commodore 64 and I remember myself thinking, that
             it was the best thing in the world. I was playing it whenever I could. Then I had got my first PC. At first,

@@ -4,15 +4,14 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { IndexPageRoutingModule } from './index-page-routing.module';
 import { UserComponent } from './home-page/user/user.component';
 import { FormsModule } from '@angular/forms';
-import { SearchPipe } from '../shared-module/shared/pipes/search.pipe';
-import { CapitalizePipe } from '../shared-module/shared/pipes/capitalize.pipe';
-import { HoverDirective } from '../shared-module/shared/directives/hover.directive';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 @NgModule({
-  declarations: [HomePageComponent, UserComponent, CapitalizePipe, SearchPipe, HoverDirective],
+  declarations: [HomePageComponent, UserComponent],
   imports: [
     CommonModule,
     IndexPageRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModuleModule
   ]
 })
 export class IndexPageModule { }
