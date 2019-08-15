@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators/';
-import { ArrayInterface as Arr } from './array-interface';
+import { ArrayInterface as Arr } from '../shared-interfaces/array-interface';
 import { Observable } from 'rxjs';
 @Injectable()
 export class UserService {

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ArrayInterface } from './array-interface';
+import { ArrayInterface } from './shared-interfaces/array-interface';
 @Pipe({
     name: 'search'
 })

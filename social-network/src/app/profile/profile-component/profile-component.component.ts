@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { UserService } from '../../user.service';
-import { FakeProfileService } from '../../fake-profile.service';
+import { UserService } from '../../shared-services/user.service';
+import { FakeProfileService } from '../../shared-services/fake-profile.service';
 @Component({
   selector: 'app-profile-component',
   templateUrl: './profile-component.component.html',

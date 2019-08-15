@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { User } from '../../../user';
+import { User } from '../../../shared-interfaces/user';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',

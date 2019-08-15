@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ProfileStats } from './profile';
+import { ProfileStats } from '../shared-interfaces/profile';
 @Injectable({
   providedIn: 'root'
 })

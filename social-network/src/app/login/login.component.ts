@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthorizationService } from '../services/authorization.service';
+import { AuthorizationService } from '../shared-services/authorization.service';
 
 
 @Component({
