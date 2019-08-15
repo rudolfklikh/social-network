@@ -8,13 +8,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
-import { SetupComponent } from './setup/setup.component';
+import { NavBarComponent } from './common-components/nav-bar/nav-bar.component';
+import { FooterComponent } from './common-components/footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { LoginComponent } from './login/login.component';
-import { ProfileComponentComponent } from './profile-component/profile-component.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 const config = {
@@ -31,11 +28,8 @@ const config = {
     AppComponent,
     NavBarComponent,
     FooterComponent,
-    SetupComponent,
     MainContentComponent,
-    LoginComponent,
-    ProfileComponentComponent,
-    UserProfileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

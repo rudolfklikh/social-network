@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
+import { SetupComponent } from './setup/setup.component';
 import { AuthGuardService } from '../services/auth.guard.service';
+
 const routes: Routes = [
-  { path: '', component: HomePageComponent, canActivate: [AuthGuardService] }
+  {path: '', component : SetupComponent, canActivate : [AuthGuardService]}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class IndexPageRoutingModule { }
+export class OptionRoutingModule { }

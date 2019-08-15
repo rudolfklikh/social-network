@@ -2,7 +2,7 @@
     <div class="card main-information__block-card" appHover>
       <div class="card-image">
         <img src="{{ _user.image }}" class="images">
-        <span class="card-title">{{ _user.name }}</span>
+        <span class="card-title">{{ _user.name | capitalize  }}</span>
       </div>
       <div class="card-content  main-information__block-card_exp">
         <p>City : {{ _user.city | capitalize  }}</p>

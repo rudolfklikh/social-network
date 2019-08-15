@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Sidenav } from 'materialize-css';
-import { AuthorizationService } from '../services/authorization.service';
+import { AuthorizationService } from '../../services/authorization.service';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',

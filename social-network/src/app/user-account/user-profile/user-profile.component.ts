@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthorizationService } from '../services/authorization.service';
+import { AuthorizationService } from '../../services/authorization.service';
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -8,7 +8,7 @@ import { AuthorizationService } from '../services/authorization.service';
 export class UserProfileComponent implements OnInit {
 
   constructor(public auth: AuthorizationService) { }
-  profile;
+  profile : any;
   ngOnInit() {
     this.getUser();
   }
@@ -17,7 +17,6 @@ export class UserProfileComponent implements OnInit {
   getUser() {
     this.auth.getUser().subscribe((user) => {
       this.profile = user;
-      console.log(this.profile);
     });
   };
 
