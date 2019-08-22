@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { element } from '@angular/core/src/render3';
 
 @Pipe({
   name: 'capitalize'
