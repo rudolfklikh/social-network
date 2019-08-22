@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit {
       this.users = users;
     });
   };
-  trackByUser(index : number, item : User) : {first : string, last : string} {
+  trackByUser(index : number, item : User) : string {
     return item.name;
   }
 };
