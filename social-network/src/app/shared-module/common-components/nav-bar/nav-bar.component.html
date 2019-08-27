@@ -1,7 +1,7 @@
 <nav>
     <div class="nav-wrapper">
       <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="brand-logo"><img class="logo" src="../../assets/logo.svg"></a>
-      <a *ngIf="user$ | async" href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a *ngIf="user$ | async" href="#" data-target="mobile-demo" class="sidenav-trigger burger__menu"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down nav__links">
         
           <ng-template [ngIf]="user$ | async">
@@ -15,12 +15,10 @@
     </div>
 </nav>
   <ul class="sidenav" id="mobile-demo">
-        
   <ng-template [ngIf]="user$ | async">
       <li><a routerLink='/user'><i class="small material-icons left">person</i>Account</a></li>
       <li><a routerLink='/'><i class="material-icons left">laptop_mac</i>Search Page</a></li>
       <li><a routerLink='/setup'><i class="material-icons left">developer_board</i>Setup</a></li>
   </ng-template>
-  
   <li *ngIf="user$ | async"><a (click)="signOut()"><i class="material-icons left">highlight_off</i>Sign Out</a></li>
   </ul>

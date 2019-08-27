@@ -22,22 +22,22 @@ nav {
 a {
     font-size: 1.3rem !important;
 }
-.sidenav-trigger {
+.burger__menu {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
 }
-.sidenav-trigger i {
+.burger__menu i {
     font-size: 3rem;
 }
 
 @media screen and (min-device-width: 0px) and (max-device-width: 992px) { 
-    .sidenav-trigger {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .burger__menu {
+        height: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 }
