@@ -2,7 +2,7 @@
   <!-- Navigation bar-->
     <app-nav-bar> </app-nav-bar>
     <!-- Routing Block -> Show components -->
-    <div class="container content-block_app">
+    <div class="container content-block_app" [@routeAnimations]='prepareRoute(outlet)'>
         <router-outlet></router-outlet>
     </div>
     <!-- Footer Component ./footer/footer.component.html(all code)-->

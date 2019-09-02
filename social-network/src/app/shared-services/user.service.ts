@@ -1,8 +1,7 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators/';
 import { ArrayInterface as Arr } from '../shared-interfaces/array-interface';
-import { Observable } from 'rxjs';
 @Injectable()
 export class UserService {
   private size = 8;
@@ -22,10 +21,10 @@ export class UserService {
               street: `${user.location.street}`,
               state: `${user.location.state}`,
               city: `${user.location.city}`
-            }
-          })
+            };
+          });
         })
-      )
+      );
   }
   public setSize(size) {
     this.size = size;
@@ -39,9 +38,9 @@ export class UserService {
     return this.http.get(`https://randomuser.me/api/?seed=foobar/?inc=gender,name,picture,location&results=${this.size}&nat=gb`)
       .pipe(map((response: Arr) => response.results))
       .pipe(map(users => {
-        let user = users.find(user => {
-          return `${user.name.first} ${user.name.last}` === name;
-        })
+        const user = users.find(obj => {
+          return `${obj.name.first} ${obj.name.last}` === name;
+        });
         return {
           name: `${user.name.first} ${user.name.last}`,
           image: `${user.picture.large}`,
@@ -49,7 +48,7 @@ export class UserService {
           state: `${user.location.state}`,
           city: `${user.location.city}`
         };
-      }))
+      }));
 
   }
 }
