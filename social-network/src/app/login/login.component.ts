@@ -8,7 +8,7 @@ import { AuthorizationService } from '../shared-services/authorization.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  constructor( public auth : AuthorizationService ) { }
+  constructor( public auth: AuthorizationService ) { }
 
   ngOnInit() {
   }

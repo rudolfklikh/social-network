@@ -12,8 +12,8 @@ export class ProfileComponentComponent implements OnInit {
   user;
   profile;
   userStats;
-  charge: string = 'Follow';
-  follow: boolean = false;
+  charge = 'Follow';
+  follow = false;
   constructor(
     private route: ActivatedRoute,
     private location: Location,
@@ -40,7 +40,7 @@ export class ProfileComponentComponent implements OnInit {
   }
   public Follow() {
 
-    if (this.follow == false) {
+    if (this.follow === false) {
       this.userStats.followers++;
       this.charge = 'UnFollow';
       this.follow = true;

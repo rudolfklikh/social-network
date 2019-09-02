@@ -4,11 +4,11 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
     selector : '[appHover]'
 })
 export class HoverDirective {
-    @HostBinding('class.hovered') isHoverd : boolean = false;
+    @HostBinding('class.hovered') isHoverd = false;
 
     @HostListener('mouseenter') onmouseenter() {
         this.isHoverd = true;
-    } 
+    }
     @HostListener('mouseleave') onmouseleave() {
         this.isHoverd = false;
     }

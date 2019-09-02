@@ -8,19 +8,17 @@ import { User } from '../../../shared-interfaces/user';
 export class UserComponent implements OnInit {
 
 
-  private _user : User ;
-  constructor() { 
+  private _user: User ;
+  constructor() {
 
   }
 
-  @Input() set user(user : User) {
+  @Input() set user(user: User) {
     this._user = user;
   }
-  
-  
-  get user() : User {
+  get user(): User {
     return this._user;
-  } 
+  }
   ngOnInit() {
   }
 

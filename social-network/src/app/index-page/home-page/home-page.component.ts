@@ -5,22 +5,20 @@ import { slideInAnimation } from 'src/app/shared-interfaces/animation';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss'],
-  animations: [
-    slideInAnimation
-  ]
+  styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
   users = [];
-  searchStr : string  = '';
+  searchStr = '';
   constructor(public userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(users => { 
+    this.userService.getUsers().subscribe(users => {
       this.users = users;
     });
-  };
-  trackByUser(index : number, item : User) : string {
+  }
+
+  trackByUser(index: number, item: User): string {
     return item.name;
   }
-};
+}

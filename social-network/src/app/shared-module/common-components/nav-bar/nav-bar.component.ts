@@ -26,11 +26,11 @@ export class NavBarComponent implements OnInit {
         preventScrolling: true
       });
     });
-  };
+  }
   public signOut() {
     this.auth.signOut();
   }
   get user$() {
     return this.auth.user$;
   }
-};
+}

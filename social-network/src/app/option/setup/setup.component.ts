@@ -4,14 +4,11 @@ import { slideInAnimation } from 'src/app/shared-interfaces/animation';
 @Component({
   selector: 'app-setup',
   templateUrl: './setup.component.html',
-  styleUrls: ['./setup.component.scss'],
-  animations: [
-    slideInAnimation
-  ]
+  styleUrls: ['./setup.component.scss']
 })
 export class SetupComponent implements OnInit {
   size;
-  constructor(private UserService : UserService) { 
+  constructor(private UserService: UserService) {
   }
 
   onChange() {

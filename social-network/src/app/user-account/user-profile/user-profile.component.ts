@@ -8,7 +8,7 @@ import { AuthorizationService } from '../../shared-services/authorization.servic
 export class UserProfileComponent implements OnInit {
 
   constructor(public auth: AuthorizationService) { }
-  profile : any;
+  profile: any;
   ngOnInit() {
     this.getUser();
   }
@@ -18,6 +18,6 @@ export class UserProfileComponent implements OnInit {
     this.auth.getUser().subscribe((user) => {
       this.profile = user;
     });
-  };
+  }
 
 }
