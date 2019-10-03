@@ -40,7 +40,7 @@ export class ProfileComponentComponent implements OnInit {
   }
   public Follow() {
 
-    if (this.follow === false) {
+    if (!this.follow) {
       this.userStats.followers++;
       this.charge = 'UnFollow';
       this.follow = true;
